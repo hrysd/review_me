@@ -1,0 +1,13 @@
+{
+  "name": "review_me",
+  "description": "",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::676359170534:role/review_me_lambda_function",
+  "environment": {},
+  "handler": "main.default",
+  "hooks": {
+    "build": "../../node_modules/.bin/browserify --node -s default -t babelify -o main.js index.js",
+    "clean": "rm -f main.js"
+  }
+}

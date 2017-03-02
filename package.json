@@ -1,0 +1,22 @@
+{
+  "name": "review_me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "6.10.3",
+    "babelify": "7.3.0",
+    "browserify": "13.0.0"
+  },
+  "dependencies": {
+    "apex.js": "2.0.0",
+    "axios": "0.15.3",
+    "octonode": "^0.7.9"
+  }
+}
