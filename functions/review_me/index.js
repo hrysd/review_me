@@ -24,7 +24,7 @@ function labeledIssues(repo, labels) {
       if (err) { return 'Fail to get PRs'; }
 
       text += issues.map((issue) => {
-        return `- [${[issue.title]}](${issue.html_url})`;
+        return `- [${[issue.title]}](${issue.html_url}) by __${issue.user.login}__`;
       }).join('\n');
 
       resolve(text);
