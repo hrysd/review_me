@@ -35,7 +35,7 @@ function labeledIssues(repo, labels) {
 export default lambda((e, ctx) => {
   return new Promise((resolve, reject) => {
     Promise.all(repositories).then((data) => {
-      let text = '## Let\'s review \n\n';
+      let text = '## (゛、゜) ＜ レビューしてくれ〜〜〜 \n\n';
 
       text += data.join('\n\n');
 
