@@ -19,9 +19,9 @@ const repositories = REPOSITORIES.split(',').map((repository) => {
 function labeledIssues(repo, labels) {
   return new Promise((resolve, reject) => {
     const a = repo.issues({labels: labels, state: 'open'}, function(err, issues) {
-      let text = `### ${repo.name}\n\n`;
+      if (err) { return resolve(''); }
 
-      if (err) { return 'Fail to get PRs'; }
+      let text = `### ${repo.name}\n\n`;
 
       text += issues.map((issue) => {
         const imgTag = `<img src='${issue.user.avatar_url}' width='16' height='16'/>`;
